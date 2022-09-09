@@ -10,6 +10,7 @@
   --alternative: rgb(213, 230, 238);
   --text-color: rgb(21, 19, 18);
   --text-color-alternative: rgb(84, 84, 84);
+  --button-selected: rgb(243, 181, 181);
 
   /*espacios*/
   --spacing-large: 6rem;
@@ -102,6 +103,11 @@ body {
   border-radius: 1rem;
   font-size: var(--text-normal);
   border: 0.3rem solid var(--primary);
+  transition: all 0.3s;
+}
+.header__links li:hover {
+  border-color: var(--button-selected);
+  transform: scale(1.05);
 }
 
 /*Main Inicio*/
