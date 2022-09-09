@@ -4,7 +4,7 @@
 }
 :root {
   /*colores*/
-  --primary: rgb(253, 251, 251);
+  --primary: rgb(255, 255, 255);
   --button: rgb(255, 206, 206);
   --secondary: rgb(122, 115, 91);
   --alternative: rgb(213, 230, 238);
@@ -325,11 +325,31 @@ main {
 
 /* Estilos de pagina contacto.html */
 
-.contacto {
+.contacto__main {
   display: flex;
   justify-content: flex-end;
   padding: 20px;
   height: 100%;
+  grid-area: main;
+  width: 100%;
+}
+.contacto {
+  width: 100%;
+}
+.contacto__titulo {
+  font-size: var(--text-large);
+  padding-top: var(--spacing-small);
+  padding-bottom: var(--spacing-small);
+}
+.contacto__contenedor__formulario {
+  display: flex;
+  justify-content: flex-end;
+}
+.contacto__descripcion {
+  font-size: var(--text-medium);
+  color: var(--text-color-alternative);
+  padding: var(--spacing-medium);
+  padding-right: 20rem;
 }
 .contacto__formulario {
   display: flex;
@@ -339,23 +359,41 @@ main {
 }
 .contacto__formulario label {
   color: var(--text-color-alternative);
+  font-size: medium;
+  margin-top: var(--spacing-xsmall);
 }
 .contacto__formulario input {
   border-radius: 10px;
-  height: 25px;
-  width: 300px;
-  padding-left: 10px;
+  height: 3.5rem;
+  width: 40rem;
+  padding-left: var(--spacing-small);
 }
 .contacto__formulario textarea {
   border-radius: 10px;
-  height: 150px;
-  width: 300px;
-  padding-left: 10px;
+  height: 20rem;
+  width: 40rem;
+  padding: var(--spacing-small);
+  border-width: 2px;
+  border-style: inset;
+  border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
 }
 .contacto__formulario input.contacto__formulario__boton {
-  border-radius: 10px;
-  width: 80px;
-  margin-top: 10px;
+  width: 15rem;
+  margin-top: var(--spacing-small);
+  padding: 0 var(--spacing-small);
+  background: linear-gradient(
+    90deg,
+    rgba(249, 225, 225, 1) 0%,
+    rgba(241, 229, 229, 1) 100%
+  );
+  border-radius: 1rem;
+  font-size: var(--text-normal);
+  border: 0.3rem solid var(--primary);
+  transition: all 0.5s;
+}
+.contacto__formulario input.contacto__formulario__boton:hover {
+  border-color: var(--button-selected);
+  transform: scale(1.05);
 }
 
 /*Mobile*/
@@ -420,5 +458,19 @@ main {
   }
   .contacto {
     padding: 0;
+  }
+  .contacto__contenedor__formulario {
+    flex-direction: column;
+    align-items: center;
+  }
+  .contacto__descripcion {
+    padding-right: 0;
+    padding: var(--spacing-medium);
+  }
+  .contacto__formulario textarea {
+    max-width: 28rem;
+  }
+  .contacto__formulario input {
+    max-width: 28rem;
   }
 }
