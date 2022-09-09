@@ -241,10 +241,12 @@ main {
 .producto__detalles {
   font-size: var(--text-normal);
   color: var(--text-color-alternative);
+  max-width: 35rem;
 }
 .producto__contenedor__precio {
   justify-self: flex-end;
   padding: var(--spacing-xsmall);
+  max-width: 35rem;
 }
 
 .producto__precio {
