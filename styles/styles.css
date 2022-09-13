@@ -52,26 +52,17 @@ img {
 }
 
 body {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr auto 1fr;
-  grid-template-areas:
-    "header header"
-    "main main"
-    "footer footer";
   height: 100vh;
-  row-gap: var(--spacing-xsmall);
-  column-gap: var(--spacing-xsmall);
+
   background-color: var(--primary);
 }
 
 /*Header*/
 
 .header__links {
-  grid-area: header;
-  display: flex;
+  /* display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: flex-end; */
   padding: var(--spacing-medium);
   background: linear-gradient(
     180deg,
@@ -118,7 +109,6 @@ main {
 }
 
 .main__inicio {
-  grid-area: main;
 }
 
 .inicio {
@@ -162,7 +152,6 @@ footer {
   justify-content: space-between;
   align-items: center;
   padding: var(--spacing-small);
-  grid-area: footer;
 }
 
 footer li a {
@@ -187,7 +176,6 @@ main {
 }
 
 .quienes__main {
-  grid-area: main;
 }
 
 .quienes {
@@ -227,7 +215,6 @@ main {
   padding: var(--spacing-xsmall);
   flex-direction: column;
   width: 100%;
-  grid-area: main;
 }
 .seccion__productos {
   display: flex;
@@ -276,53 +263,12 @@ main {
 
 /* Estilos de pagina galeria.html*/
 .galeria__main {
-  grid-area: main;
 }
-.galeria {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(2, 1fr) 50rem 1fr 100rem;
-  gap: var(--spacing-small);
-}
+
 .galeria__foto img {
-  object-fit: cover;
-  height: 100%;
+  max-height: 58rem;
+  object-fit: contain;
 }
-.galeria__foto:nth-of-type(1) {
-  grid-column: 1/7;
-  /* grid-row: 1/2; */
-}
-.galeria__foto:nth-of-type(2) {
-  grid-column: 7/13;
-}
-
-.galeria__foto:nth-of-type(3) {
-  grid-column: 1/7;
-  /* grid-row: 2/3; */
-}
-.galeria__foto:nth-of-type(4) {
-  grid-column: 7/13;
-  /* grid-row: 2/3; */
-}
-
-.galeria__foto:nth-of-type(5) {
-  grid-column: 1/13;
-  /* grid-row: 3/4; */
-}
-
-.galeria__foto:nth-of-type(6) {
-  grid-column: 1/7;
-  /* grid-row: 4/5; */
-}
-.galeria__foto:nth-of-type(7) {
-  grid-column: 7/13;
-  /* grid-row: 5/6; */
-}
-.galeria__foto:nth-of-type(8) {
-  grid-column: 1/13;
-  /* grid-row: 4/5; */
-}
-
 /* Estilos de pagina contacto.html */
 
 .contacto__main {
@@ -330,7 +276,7 @@ main {
   justify-content: flex-end;
   padding: 20px;
   height: 100%;
-  grid-area: main;
+
   width: 100%;
 }
 .contacto {
@@ -401,15 +347,7 @@ main {
 
 @media screen and (max-width: 860px) {
   body {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-areas:
-      "header"
-      "main"
-      "footer";
     height: 100vh;
-    row-gap: 0;
-    column-gap: 0;
   }
 }
 

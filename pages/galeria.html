@@ -12,7 +12,7 @@
       integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="stylesheet" href="../styles/styles.css" />
     <title>Galeria</title>
     <link rel="shortcut icon" href="../images/Logo 1.jpg" />
   </head>
@@ -42,39 +42,93 @@
       </nav>
     </header>
     <main class="galeria__main">
-      <section class="galeria">
-        <picture class="galeria__foto">
-          <img src="../images/Fotopicada1.jpg" alt="foto picada uno" />
-        </picture>
+      <div
+        id="carouselExampleControls"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div class="galeria carousel-inner">
+          <div class="galeria__foto carousel-item active">
+            <img
+              src="../images/Fotopicada1.jpg"
+              class="d-block w-100"
+              alt="foto picada uno"
+            />
+          </div>
+          <div class="galeria__foto carousel-item">
+            <img
+              src="../images/fotopicada2.jpg"
+              class="d-block w-100"
+              alt="foto picada dos"
+            />
+          </div>
+          <div class="galeria__foto carousel-item">
+            <img
+              src="../images/fotopicada3.JPG"
+              class="d-block w-100"
+              alt="foto picada tres"
+            />
+          </div>
 
-        <picture class="galeria__foto">
-          <img src="../images/fotopicada2.jpg" alt="foto picada dos" />
-        </picture>
+          <div class="galeria__foto carousel-item">
+            <img
+              src="../images/fotopicada4.JPG"
+              class="d-block w-100"
+              alt="foto picada cuatro"
+            />
+          </div>
 
-        <picture class="galeria__foto">
-          <img src="../images/fotopicada3.JPG" alt="foto picada tres" />
-        </picture>
+          <div class="galeria__foto carousel-item">
+            <img
+              src="../images/fotopicada5.jpg"
+              class="d-block w-100"
+              alt="foto picada cinco"
+            />
+          </div>
 
-        <picture class="galeria__foto">
-          <img src="../images/fotopicada4.JPG" alt="foto picada cuatro" />
-        </picture>
+          <div class="galeria__foto carousel-item">
+            <img
+              src="../images/fotopicada6.jpg"
+              class="d-block w-100"
+              alt="foto picada seis"
+            />
+          </div>
 
-        <picture class="galeria__foto">
-          <img src="../images/fotopicada5.jpg" alt="foto picada cinco" />
-        </picture>
+          <div class="galeria__foto carousel-item">
+            <img
+              src="../images/fotopicada7.jpg"
+              class="d-block w-100"
+              alt="foto picada siete"
+            />
+          </div>
 
-        <picture class="galeria__foto">
-          <img src="../images/fotopicada6.jpg" alt="foto picada seis" />
-        </picture>
-
-        <picture class="galeria__foto">
-          <img src="../images/fotopicada7.jpg" alt="foto picada siete" />
-        </picture>
-
-        <picture class="galeria__foto">
-          <img src="../images/fotopicada8.JPG" alt="foto picada ocho" />
-        </picture>
-      </section>
+          <div class="galeria__foto carousel-item">
+            <img
+              src="../images/fotopicada8.JPG"
+              class="d-block w-100"
+              alt="foto picada ocho"
+            />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleControls"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleControls"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
     </main>
     <footer class="footer">
       <nav class="footer__menu">
