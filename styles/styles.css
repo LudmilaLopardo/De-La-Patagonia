@@ -184,11 +184,8 @@ footer li a {
   padding-top: var(--spacing-small);
   padding-bottom: var(--spacing-small);
 }
-.producto__img img {
-  border-radius: var(--spacing-small);
-  width: 350px;
-  height: 250px;
-  margin: 0 auto;
+.producto__img {
+  height: 50rem;
   object-fit: cover;
 }
 
@@ -216,21 +213,11 @@ footer li a {
 }
 /* Estilos de pagina contacto.html */
 
-.contacto__main {
-  display: flex;
-  justify-content: flex-end;
-  padding: 20px;
-  height: 100%;
-
-  width: 100%;
-}
-.contacto {
-  width: 100%;
-}
 .contacto__titulo {
   font-size: var(--text-large);
   padding-top: var(--spacing-small);
   padding-bottom: var(--spacing-small);
+  padding-left: var(--spacing-medium);
 }
 .contacto__contenedor__formulario {
   display: flex;
@@ -240,7 +227,6 @@ footer li a {
   font-size: var(--text-medium);
   color: var(--text-color-alternative);
   padding: var(--spacing-medium);
-  padding-right: 20rem;
 }
 .contacto__formulario {
   display: flex;
@@ -252,6 +238,8 @@ footer li a {
   color: var(--text-color-alternative);
   font-size: medium;
   margin-top: var(--spacing-xsmall);
+  text-align: left;
+  width: 40rem;
 }
 .contacto__formulario input {
   border-radius: 10px;
