@@ -16,29 +16,55 @@
     <title>Productos</title>
     <link rel="shortcut icon" href="../images/Logo 1.jpg" />
   </head>
-  <body>
-    <header class="header__links">
-      <picture class="header__links__logo">
-        <img src="../images/Logo 1.jpg" alt="De la patagonia Picadas" />
-      </picture>
-      <nav class="header__links__menu">
-        <ul class="header__links__lista">
-          <li>
-            <a href="../index.html"> Inicio</a>
-          </li>
-          <li>
-            <a href="./productos.html"> Productos</a>
-          </li>
-          <li>
-            <a href="./galeria.html"> Galeria</a>
-          </li>
-          <li>
-            <a href="./quienes-somos.html"> Quienes Somos </a>
-          </li>
-          <li>
-            <a href="./contacto.html">Contacto </a>
-          </li>
-        </ul>
+  <body class="container-fluid">
+    <header class="row mb-5">
+      <nav class="navbar navbar-expand-lg header__links">
+        <div class="container-fluid align-items-lg-end">
+          <a class="navbar-brand" href="#">
+            <img
+              class="header__links__logo"
+              src="../images/Logo 1.jpg"
+              alt="Bootstrap"
+            />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarSupportedContent"
+          >
+            <ul class="navbar-nav mb-2 mb-lg-0 gap-3">
+              <li class="nav-item header__links__button">
+                <a class="nav-link" aria-current="page" href="../index.html"
+                  >Inicio</a
+                >
+              </li>
+              <li class="nav-item header__links__button">
+                <a class="nav-link" href="./productos.html">Productos</a>
+              </li>
+              <li class="nav-item header__links__button">
+                <a class="nav-link" href="./galeria.html">Galeria</a>
+              </li>
+              <li class="nav-item header__links__button">
+                <a class="nav-link" href="./quienes-somos.html"
+                  >Quienes Somos</a
+                >
+              </li>
+              <li class="nav-item header__links__button">
+                <a class="nav-link" href="./contacto.html">Contacto</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </nav>
     </header>
     <main class="productos">
@@ -197,54 +223,58 @@
         </article>
       </section>
     </main>
-    <footer class="footer">
-      <nav class="footer__menu">
-        <ul class="footer__lista">
-          <li>
-            <a href="../index.html"> Inicio</a>
-          </li>
-          <li>
-            <a href="./productos.html"> Productos</a>
-          </li>
-          <li>
-            <a href="./galeria.html"> Galeria</a>
-          </li>
-          <li>
-            <a href="./quienes-somos.html"> Quienes Somos </a>
-          </li>
-          <li>
-            <a href="./contacto.html">Contacto </a>
-          </li>
-        </ul>
-      </nav>
-      <ul class="footer__redes">
-        <li>
-          <a
-            href="https://www.instagram.com/delapatagoniapicadas/"
-            target="_blank"
-          >
-            <picture>
-              <img
-                src="../images/Instagram_logo_2016.svg.webp"
-                alt="logo instagram"
-              />
-            </picture>
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://www.facebook.com/delapatagoniapicadas/"
-            target="_blank"
-          >
-            <picture>
-              <img
-                src="../images/Facebook_f_logo_(2019).svg.png"
-                alt="logo facebook"
-              />
-            </picture>
-          </a>
-        </li>
-      </ul>
+    <footer class="row">
+      <div class="col">
+        <div class="row justify-content-between">
+          <nav class="col-6">
+            <ul class="footer__lista">
+              <li>
+                <a href="../index.html"> Inicio</a>
+              </li>
+              <li>
+                <a href="./productos.html"> Productos</a>
+              </li>
+              <li>
+                <a href="./galeria.html"> Galeria</a>
+              </li>
+              <li>
+                <a href="./quienes-somos.html"> Quienes Somos </a>
+              </li>
+              <li>
+                <a href="./contacto.html">Contacto </a>
+              </li>
+            </ul>
+          </nav>
+          <ul class="footer__redes col-4 col-md-2 col-lg-1">
+            <li>
+              <a
+                href="https://www.instagram.com/delapatagoniapicadas/"
+                target="_blank"
+              >
+                <picture>
+                  <img
+                    src="../images/Instagram_logo_2016.svg.webp"
+                    alt="logo instagram"
+                  />
+                </picture>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.facebook.com/delapatagoniapicadas/"
+                target="_blank"
+              >
+                <picture>
+                  <img
+                    src="../images/Facebook_f_logo_(2019).svg.png"
+                    alt="logo facebook"
+                  />
+                </picture>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </footer>
     <!-- JavaScript Bundle with Popper -->
     <script

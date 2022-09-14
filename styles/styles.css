@@ -60,9 +60,6 @@ body {
 /*Header*/
 
 .header__links {
-  /* display: flex;
-  justify-content: space-between;
-  align-items: flex-end; */
   padding: var(--spacing-medium);
   background: linear-gradient(
     180deg,
@@ -71,19 +68,13 @@ body {
   );
 }
 
-.header__links ul {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  gap: var(--spacing-xsmall);
-}
-.header__links__logo img {
+.header__links__logo {
   border-radius: 50%;
   width: 22.3rem;
   height: 22.3rem;
   border: 2px solid var(--text-color);
 }
-.header__links li {
+.header__links__button {
   background: linear-gradient(
     90deg,
     rgba(249, 225, 225, 1) 0%,
@@ -93,41 +84,15 @@ body {
   text-align: center;
   border-radius: 1rem;
   font-size: var(--text-normal);
-  border: 0.3rem solid var(--primary);
+  border: 0.3rem solid transparent;
   transition: all 0.3s;
 }
-.header__links li:hover {
+.header__links__button:hover {
   border-color: var(--button-selected);
   transform: scale(1.05);
 }
 
 /*Main Inicio*/
-
-main {
-  max-width: 1400px;
-  margin: 0 auto;
-}
-
-.main__inicio {
-}
-
-.inicio {
-  display: flex;
-  padding: var(--spacing-medium);
-  align-items: center;
-}
-
-.invertir {
-  flex-direction: row-reverse;
-}
-
-.inicio__img {
-  flex: 1 1 50%;
-}
-
-.inicio__box {
-  flex: 1 1 50%;
-}
 
 .inicio__titulo {
   font-size: var(--text-large);
@@ -148,9 +113,7 @@ footer {
     rgba(249, 225, 223, 1) 0%,
     rgba(255, 255, 255, 1) 100%
   );
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+
   padding: var(--spacing-small);
 }
 
@@ -170,26 +133,10 @@ footer li a {
 
 /* Estilos de pagina quienes-somos.html*/
 
-main {
-  max-width: 1400px;
-  margin: 0 auto;
-}
-
-.quienes__main {
-}
-
 .quienes {
   display: flex;
   padding: var(--spacing-medium);
   align-items: center;
-}
-
-.quienes__img {
-  flex: 1 1 50%;
-}
-
-.quienes__box {
-  flex: 1 1 50%;
 }
 
 .quienes__titulo {
@@ -262,8 +209,6 @@ main {
 }
 
 /* Estilos de pagina galeria.html*/
-.galeria__main {
-}
 
 .galeria__foto img {
   max-height: 58rem;
