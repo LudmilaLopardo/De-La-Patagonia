@@ -118,7 +118,6 @@ footer {
 footer li a {
   color: var(--text-color);
   font-size: var(--text-normal);
-  padding: var(--spacing-medium);
 }
 .footer__redes {
   display: flex;
