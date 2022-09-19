@@ -97,13 +97,11 @@ body {
 
 .inicio__titulo {
   font-size: var(--text-large);
-  padding: var(--spacing-medium);
 }
 
 .inicio__descripcion {
   font-size: var(--text-medium);
   color: var(--text-color-alternative);
-  padding: var(--spacing-medium);
 }
 
 /*Footer*/
@@ -115,12 +113,12 @@ footer {
     rgba(255, 255, 255, 1) 100%
   );
 
-  padding: var(--spacing-small);
+  padding: var(--spacing-medium);
 }
-
 footer li a {
   color: var(--text-color);
   font-size: var(--text-normal);
+  padding: var(--spacing-medium);
 }
 .footer__redes {
   display: flex;
@@ -155,18 +153,20 @@ footer li a {
 
 .titulo__picadas {
   font-size: var(--text-large);
+  padding: var(--spacing-medium);
 }
 
 .productos {
   display: flex;
   flex-wrap: wrap;
-  padding: var(--spacing-xsmall);
+  padding: var(--spacing-medium);
   flex-direction: column;
   width: 100%;
 }
 .seccion__productos {
   display: flex;
   flex-wrap: wrap;
+  padding-top: var(--spacing-medium);
   justify-content: space-between;
   background-color: var(--primary);
 }
@@ -212,6 +212,7 @@ footer li a {
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(2, 1fr) 50rem 1fr 100rem;
   gap: var(--spacing-small);
+  padding-top: var(--spacing-medium);
 }
 .galeria__foto img {
   object-fit: cover;
