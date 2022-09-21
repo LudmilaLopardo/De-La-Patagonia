@@ -3,6 +3,7 @@
   font-family: CrimsonText-SemiBold;
   src: url("../../fonts/CrimsonText-SemiBold.ttf");
 }
+/* font family */
 /*font-sizes*/
 /*Estilos Generales*/
 * {
@@ -34,7 +35,7 @@ body {
   background-color: rgb(255, 255, 255);
 }
 
-/*colores*/ /*Header*/
+/*Header*/
 header .header__links {
   padding: 3rem 1rem 3rem 1rem;
   background: linear-gradient(180deg, rgb(249, 225, 223) 0%, rgb(255, 255, 255) 100%);
