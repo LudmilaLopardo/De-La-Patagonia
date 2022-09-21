@@ -1,0 +1,36 @@
+/*Header*/
+
+header {
+  .header__links {
+    padding: $spacingMedium $spacingXsmall $spacingMedium $spacingXsmall;
+    background: linear-gradient(
+      180deg,
+      rgba(249, 225, 223, 1) 0%,
+      rgba(255, 255, 255, 1) 100%
+    );
+    .header__links__logo {
+      border-radius: 50%;
+      width: 22.3rem;
+      height: 22.3rem;
+      border: 2px solid $colorText;
+    }
+
+    .header__links__button {
+      background: linear-gradient(
+        90deg,
+        rgba(249, 225, 225, 1) 0%,
+        rgba(241, 229, 229, 1) 100%
+      );
+      padding: $spacingXsmall;
+      text-align: center;
+      border-radius: 1rem;
+      font-size: $textNormal;
+      border: 0.3rem solid transparent;
+      transition: all 0.3s;
+      &:hover {
+        border-color: $colorButtonSelected;
+        transform: scale(1.05);
+      }
+    }
+  }
+}

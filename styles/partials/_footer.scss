@@ -1,0 +1,27 @@
+/*Footer*/
+
+footer {
+  background: linear-gradient(
+    0deg,
+    rgba(249, 225, 223, 1) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  padding: $spacingMedium;
+
+  li {
+    a {
+      color: $colorText;
+      font-size: $textNormal;
+    }
+  }
+  .footer__redes {
+    display: flex;
+    justify-content: space-evenly;
+    gap: $spacingSmall;
+
+    img {
+      height: 4.8rem;
+      width: 4.8rem;
+    }
+  }
+}

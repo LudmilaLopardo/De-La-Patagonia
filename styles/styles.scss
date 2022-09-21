@@ -1,40 +1,13 @@
-@font-face {
-  font-family: CrimsonText-SemiBold;
-  src: url("../fonts/CrimsonText-SemiBold.ttf");
-}
-:root {
-  /*colores*/
-  --primary: rgb(255, 255, 255);
-  --button: rgb(255, 206, 206);
-  --secondary: rgb(122, 115, 91);
-  --alternative: rgb(213, 230, 238);
-  --text-color: rgb(21, 19, 18);
-  --text-color-alternative: rgb(84, 84, 84);
-  --button-selected: rgb(243, 181, 181);
+@import "./partials/colors";
+@import "./partials/spacing";
+@import "./partials/fonts";
 
-  /*espacios*/
-  --spacing-large: 6rem;
-  --spacing-medium: 3rem;
-  --spacing-small: 1.5rem;
-  --spacing-xsmall: 1rem;
-
-  /*font-family*/
-  --font-principal: ;
-  --font-title: ;
-
-  /*font-sizes*/
-  --text-large: 4.5em;
-  --text-medium: 2.5em;
-  --text-normal: 2em;
-  --text-small: 1.6em;
-  --text-xsmall: 1.4em;
-}
 /*Estilos Generales*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "CrimsonText-SemiBold";
+  font-family: $fontFamily;
 }
 html {
   font-size: 62.5%;
@@ -45,7 +18,7 @@ ul {
 
 a {
   text-decoration: none;
-  color: var(--text-color);
+  color: $colorText;
 }
 img {
   width: 100%;
@@ -54,136 +27,69 @@ img {
 body {
   height: 100vh;
 
-  background-color: var(--primary);
+  background-color: $colorPrimary;
 }
 
-/*Header*/
+@import "./partials/header";
 
-header {
-  .header__links {
-    padding: var(--spacing-medium) var(--spacing-xsmall) var(--spacing-medium)
-      var(--spacing-xsmall);
-    background: linear-gradient(
-      180deg,
-      rgba(249, 225, 223, 1) 0%,
-      rgba(255, 255, 255, 1) 100%
-    );
-  }
+@import "./partials/main-inicio";
 
-  .header__links__logo {
-    border-radius: 50%;
-    width: 22.3rem;
-    height: 22.3rem;
-    border: 2px solid var(--text-color);
-  }
-  .header__links__button {
-    background: linear-gradient(
-      90deg,
-      rgba(249, 225, 225, 1) 0%,
-      rgba(241, 229, 229, 1) 100%
-    );
-    padding: var(--spacing-xsmall);
-    text-align: center;
-    border-radius: 1rem;
-    font-size: var(--text-normal);
-    border: 0.3rem solid transparent;
-    transition: all 0.3s;
-  }
-  .header__links__button:hover {
-    border-color: var(--button-selected);
-    transform: scale(1.05);
-  }
-}
-/*Main Inicio*/
-
-.inicio__titulo {
-  font-size: var(--text-large);
-}
-
-.inicio__descripcion {
-  font-size: var(--text-medium);
-  color: var(--text-color-alternative);
-}
-
-/*Footer*/
-
-footer {
-  background: linear-gradient(
-    0deg,
-    rgba(249, 225, 223, 1) 0%,
-    rgba(255, 255, 255, 1) 100%
-  );
-
-  padding: var(--spacing-medium);
-}
-footer li a {
-  color: var(--text-color);
-  font-size: var(--text-normal);
-}
-.footer__redes {
-  display: flex;
-  justify-content: space-evenly;
-  gap: var(--spacing-small);
-}
-.footer__redes img {
-  height: 4.8rem;
-  width: 4.8rem;
-}
+@import "./partials/footer";
 
 /* Estilos de pagina quienes-somos.html*/
 
 .quienes {
   display: flex;
-  padding: var(--spacing-medium);
+  padding: $spacingMedium;
   align-items: center;
 }
 
 .quienes__titulo {
-  font-size: var(--text-large);
-  padding: var(--spacing-medium);
+  font-size: $textLarge;
+  padding: $spacingMedium;
 }
 
 .quienes__descripcion {
-  font-size: var(--text-medium);
-  color: var(--text-color-alternative);
-  padding: var(--spacing-medium);
+  font-size: $textMedium;
+  color: $colorTextAlternative;
+  padding: $spacingMedium;
 }
 
 /* Estilos de pagina productos.html*/
 
 .titulo__picadas {
-  font-size: var(--text-large);
-  padding: var(--spacing-medium);
+  font-size: $textLarge;
+  padding: $spacingMedium;
 }
 
 .productos {
   display: flex;
   flex-wrap: wrap;
-  padding: var(--spacing-medium);
+  padding: $spacingMedium;
   flex-direction: column;
   width: 100%;
 }
 .seccion__productos {
   display: flex;
   flex-wrap: wrap;
-  padding-top: var(--spacing-medium);
+  padding-top: $spacingMedium;
   justify-content: space-between;
-  background-color: var(--primary);
+  background-color: $colorPrimary;
 }
 .producto {
   display: flex;
   flex-direction: column;
-  background-color: var(--primary);
-  border-radius: var(--spacing-medium);
-  border: var(--spacing-xsmall) solid var(--button);
-  padding: var(--spacing-xsmall);
+  background-color: $colorPrimary;
+  border-radius: $spacingMedium;
+  border: $spacingXsmall solid $colorButton;
+  padding: $spacingXsmall;
   justify-content: space-between;
-  margin-bottom: var(--spacing-xsmall);
+  margin-bottom: $spacingXsmall;
 }
 .producto__titulo {
-  font-size: var(--text-medium);
-  padding-top: var(--spacing-small);
-  padding-bottom: var(--spacing-small);
+  font-size: $textMedium;
+  padding-top: $spacingSmall;
+  padding-bottom: $spacingSmall;
 }
 .producto__img {
   height: 50rem;
@@ -191,19 +97,19 @@ footer li a {
 }
 
 .producto__detalles {
-  font-size: var(--text-normal);
-  color: var(--text-color-alternative);
+  font-size: $textNormal;
+  color: $colorTextAlternative;
   max-width: 35rem;
 }
 .producto__contenedor__precio {
   justify-self: flex-end;
-  padding: var(--spacing-xsmall);
+  padding: $spacingXsmall;
   max-width: 35rem;
 }
 
 .producto__precio {
-  font-size: var(--text-normal);
-  color: var(--text-color);
+  font-size: $textNormal;
+  color: $colorText;
 }
 
 /* Estilos de pagina galeria.html*/
@@ -211,8 +117,8 @@ footer li a {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(2, 1fr) 50rem 1fr 100rem;
-  gap: var(--spacing-small);
-  padding-top: var(--spacing-medium);
+  gap: $spacingSmall;
+  padding-top: $spacingMedium;
 }
 .galeria__foto img {
   object-fit: cover;
@@ -255,19 +161,19 @@ footer li a {
 /* Estilos de pagina contacto.html */
 
 .contacto__titulo {
-  font-size: var(--text-large);
-  padding-top: var(--spacing-small);
-  padding-bottom: var(--spacing-small);
-  padding-left: var(--spacing-medium);
+  font-size: $textLarge;
+  padding-top: $spacingSmall;
+  padding-bottom: $spacingSmall;
+  padding-left: $spacingMedium;
 }
 .contacto__contenedor__formulario {
   display: flex;
   justify-content: flex-end;
 }
 .contacto__descripcion {
-  font-size: var(--text-medium);
-  color: var(--text-color-alternative);
-  padding: var(--spacing-medium);
+  font-size: $textMedium;
+  color: $colorTextAlternative;
+  padding: $spacingMedium;
 }
 .contacto__formulario {
   display: flex;
@@ -276,9 +182,9 @@ footer li a {
   justify-content: space-evenly;
 }
 .contacto__formulario label {
-  color: var(--text-color-alternative);
+  color: $colorTextAlternative;
   font-size: medium;
-  margin-top: var(--spacing-xsmall);
+  margin-top: $spacingXsmall;
   text-align: left;
   width: 40rem;
 }
@@ -286,34 +192,34 @@ footer li a {
   border-radius: 10px;
   height: 3.5rem;
   width: 40rem;
-  padding-left: var(--spacing-small);
+  padding-left: $spacingSmall;
 }
 .contacto__formulario textarea {
   border-radius: 10px;
   height: 20rem;
   width: 40rem;
-  padding: var(--spacing-small);
+  padding: $spacingSmall;
   border-width: 2px;
   border-style: inset;
   border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
 }
 .contacto__formulario input.contacto__formulario__boton {
   width: 15rem;
-  margin-top: var(--spacing-small);
-  padding: 0 var(--spacing-small);
+  margin-top: $spacingSmall;
+  padding: 0 $spacingSmall;
   background: linear-gradient(
     90deg,
     rgba(249, 225, 225, 1) 0%,
     rgba(241, 229, 229, 1) 100%
   );
   border-radius: 1rem;
-  font-size: var(--text-normal);
-  border: 0.3rem solid var(--primary);
+  font-size: $textNormal;
+  border: 0.3rem solid $colorPrimary;
   transition: all 0.5s;
   animation: animacion_boton 2s linear infinite;
 }
 .contacto__formulario input.contacto__formulario__boton:hover {
-  border-color: var(--button-selected);
+  border-color: $colorButtonSelected;
   transform: scale(1.05);
 }
 
