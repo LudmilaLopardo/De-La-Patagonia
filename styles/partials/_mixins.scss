@@ -1,0 +1,17 @@
+@mixin button($radius, $fontSize) {
+  background: linear-gradient(
+    90deg,
+    rgba(249, 225, 225, 1) 0%,
+    rgba(241, 229, 229, 1) 100%
+  );
+  padding: $spacingXsmall;
+  text-align: center;
+  border-radius: $radius;
+  font-size: $fontSize;
+  border: 0.3rem solid transparent;
+  transition: all 0.3s;
+  &:hover {
+    border-color: map-get($colors, colorButton) Selected;
+    transform: scale(1.05);
+  }
+}

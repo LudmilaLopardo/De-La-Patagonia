@@ -10,7 +10,7 @@ footer {
 
   li {
     a {
-      color: $colorText;
+      color: map-get($colors, colorText);
       font-size: $textNormal;
     }
   }

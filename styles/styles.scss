@@ -1,6 +1,8 @@
-@import "./partials/colors";
+@import "./partials/maps";
 @import "./partials/spacing";
 @import "./partials/fonts";
+@import "./partials/extends";
+@import "./partials/mixins";
 
 /*Estilos Generales*/
 * {
@@ -18,7 +20,7 @@ ul {
 
 a {
   text-decoration: none;
-  color: $colorText;
+  color: map-get($colors, colorText);
 }
 img {
   width: 100%;
@@ -27,7 +29,7 @@ img {
 body {
   height: 100vh;
 
-  background-color: $colorPrimary;
+  background-color: map-get($colors, colorPrimary);
 }
 
 @import "./partials/header";
@@ -45,21 +47,19 @@ body {
 }
 
 .quienes__titulo {
-  font-size: $textLarge;
-  padding: $spacingMedium;
+  @extend %titulos;
 }
 
 .quienes__descripcion {
   font-size: $textMedium;
-  color: $colorTextAlternative;
+  color: map-get($colors, colorTextAlternative);
   padding: $spacingMedium;
 }
 
 /* Estilos de pagina productos.html*/
 
 .titulo__picadas {
-  font-size: $textLarge;
-  padding: $spacingMedium;
+  @extend %titulos;
 }
 
 .productos {
@@ -74,22 +74,20 @@ body {
   flex-wrap: wrap;
   padding-top: $spacingMedium;
   justify-content: space-between;
-  background-color: $colorPrimary;
+  background-color: map-get($colors, colorPrimary);
 }
 .producto {
   display: flex;
   flex-direction: column;
-  background-color: $colorPrimary;
+  background-color: map-get($colors, colorPrimary);
   border-radius: $spacingMedium;
-  border: $spacingXsmall solid $colorButton;
+  border: $spacingXsmall solid map-get($colors, colorButton);
   padding: $spacingXsmall;
   justify-content: space-between;
   margin-bottom: $spacingXsmall;
 }
 .producto__titulo {
-  font-size: $textMedium;
-  padding-top: $spacingSmall;
-  padding-bottom: $spacingSmall;
+  @extend %titulos;
 }
 .producto__img {
   height: 50rem;
@@ -98,7 +96,7 @@ body {
 
 .producto__detalles {
   font-size: $textNormal;
-  color: $colorTextAlternative;
+  color: map-get($colors, colorTextAlternative);
   max-width: 35rem;
 }
 .producto__contenedor__precio {
@@ -109,7 +107,7 @@ body {
 
 .producto__precio {
   font-size: $textNormal;
-  color: $colorText;
+  color: map-get($colors, colorText);
 }
 
 /* Estilos de pagina galeria.html*/
@@ -161,18 +159,16 @@ body {
 /* Estilos de pagina contacto.html */
 
 .contacto__titulo {
-  font-size: $textLarge;
-  padding-top: $spacingSmall;
-  padding-bottom: $spacingSmall;
-  padding-left: $spacingMedium;
+  @extend %titulos;
 }
+
 .contacto__contenedor__formulario {
   display: flex;
   justify-content: flex-end;
 }
 .contacto__descripcion {
   font-size: $textMedium;
-  color: $colorTextAlternative;
+  color: map-get($colors, colorTextAlternative);
   padding: $spacingMedium;
 }
 .contacto__formulario {
@@ -182,7 +178,7 @@ body {
   justify-content: space-evenly;
 }
 .contacto__formulario label {
-  color: $colorTextAlternative;
+  color: map-get($colors, colorTextAlternative);
   font-size: medium;
   margin-top: $spacingXsmall;
   text-align: left;
@@ -206,21 +202,9 @@ body {
 .contacto__formulario input.contacto__formulario__boton {
   width: 15rem;
   margin-top: $spacingSmall;
+  @include button(2rem, $textNormal);
   padding: 0 $spacingSmall;
-  background: linear-gradient(
-    90deg,
-    rgba(249, 225, 225, 1) 0%,
-    rgba(241, 229, 229, 1) 100%
-  );
-  border-radius: 1rem;
-  font-size: $textNormal;
-  border: 0.3rem solid $colorPrimary;
-  transition: all 0.5s;
   animation: animacion_boton 2s linear infinite;
-}
-.contacto__formulario input.contacto__formulario__boton:hover {
-  border-color: $colorButtonSelected;
-  transform: scale(1.05);
 }
 
 /*Mobile*/

@@ -4,6 +4,6 @@
   }
   .inicio__descripcion {
     font-size: $textMedium;
-    color: $colorTextAlternative;
+    color: map-get($colors, colorTextAlternative);
   }
 }
