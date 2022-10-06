@@ -39,172 +39,156 @@ body {
 @import "./partials/footer";
 
 /* Estilos de pagina quienes-somos.html*/
-
-.quienes {
-  display: flex;
-  padding: $spacingMedium;
-  align-items: center;
-}
-
-.quienes__titulo {
-  @extend %titulos;
-}
-
-.quienes__descripcion {
-  font-size: $textMedium;
-  color: map-get($colors, colorTextAlternative);
-  padding: $spacingMedium;
+.quienes__main {
+  .quienes__titulo {
+    @extend %titulos;
+  }
+  .quienes {
+    display: flex;
+    padding: $spacingMedium;
+    align-items: center;
+    .quienes__descripcion {
+      font-size: $textMedium;
+      color: map-get($colors, colorTextAlternative);
+      padding: $spacingMedium;
+    }
+  }
 }
 
 /* Estilos de pagina productos.html*/
 
-.titulo__picadas {
-  @extend %titulos;
-}
-
 .productos {
-  display: flex;
-  flex-wrap: wrap;
-  padding: $spacingMedium;
-  flex-direction: column;
-  width: 100%;
-}
-.seccion__productos {
-  display: flex;
-  flex-wrap: wrap;
-  padding-top: $spacingMedium;
-  justify-content: space-between;
-  background-color: map-get($colors, colorPrimary);
-}
-.producto {
-  display: flex;
-  flex-direction: column;
-  background-color: map-get($colors, colorPrimary);
-  border-radius: $spacingMedium;
-  border: $spacingXsmall solid map-get($colors, colorButton);
-  padding: $spacingXsmall;
-  justify-content: space-between;
-  margin-bottom: $spacingXsmall;
-}
-.producto__titulo {
-  @extend %titulos;
-}
-.producto__img {
-  height: 50rem;
-  object-fit: cover;
-}
-
-.producto__detalles {
-  font-size: $textNormal;
-  color: map-get($colors, colorTextAlternative);
-  max-width: 35rem;
-}
-.producto__contenedor__precio {
-  justify-self: flex-end;
-  padding: $spacingXsmall;
-  max-width: 35rem;
-}
-
-.producto__precio {
-  font-size: $textNormal;
-  color: map-get($colors, colorText);
+  .titulo__picadas {
+    @extend %titulos;
+  }
+  .producto__titulo {
+    @extend %titulos;
+  }
+  .producto__img {
+    height: 50rem;
+    object-fit: cover;
+  }
+  .producto__detalles {
+    font-size: $textNormal;
+    color: map-get($colors, colorTextAlternative);
+    max-width: 35rem;
+  }
+  .producto__contenedor__precio {
+    justify-self: flex-end;
+    padding: $spacingXsmall;
+    max-width: 35rem;
+  }
+  .producto__precio {
+    font-size: $textNormal;
+    color: map-get($colors, colorText);
+  }
 }
 
 /* Estilos de pagina galeria.html*/
-.galeria {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(2, 1fr) 50rem 1fr 100rem;
-  gap: $spacingSmall;
-  padding-top: $spacingMedium;
-}
-.galeria__foto img {
-  object-fit: cover;
-  height: 100%;
-}
-.galeria__foto:nth-of-type(1) {
-  grid-column: 1/7;
-  /* grid-row: 1/2; */
-}
-.galeria__foto:nth-of-type(2) {
-  grid-column: 7/13;
+
+.galeria__main {
+  .galeria {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(2, 1fr) 50rem 1fr 100rem;
+    gap: $spacingSmall;
+    padding-top: $spacingMedium;
+    .galeria__foto {
+      img {
+        object-fit: cover;
+        height: 100%;
+      }
+      &:nth-of-type(1) {
+        grid-column: 1/7;
+        /* grid-row: 1/2; */
+      }
+      &:nth-of-type(2) {
+        grid-column: 7/13;
+      }
+      &:nth-of-type(3) {
+        grid-column: 1/7;
+        /* grid-row: 2/3; */
+      }
+      &:nth-of-type(4) {
+        grid-column: 7/13;
+        /* grid-row: 2/3; */
+      }
+      &:nth-of-type(5) {
+        grid-column: 1/13;
+        /* grid-row: 3/4; */
+      }
+      &:nth-of-type(6) {
+        grid-column: 1/7;
+        /* grid-row: 4/5; */
+      }
+      &:nth-of-type(7) {
+        grid-column: 7/13;
+        /* grid-row: 5/6; */
+      }
+      &:nth-of-type(8) {
+        grid-column: 1/13;
+        /* grid-row: 4/5; */
+      }
+    }
+  }
 }
 
-.galeria__foto:nth-of-type(3) {
-  grid-column: 1/7;
-  /* grid-row: 2/3; */
-}
-.galeria__foto:nth-of-type(4) {
-  grid-column: 7/13;
-  /* grid-row: 2/3; */
-}
-
-.galeria__foto:nth-of-type(5) {
-  grid-column: 1/13;
-  /* grid-row: 3/4; */
-}
-
-.galeria__foto:nth-of-type(6) {
-  grid-column: 1/7;
-  /* grid-row: 4/5; */
-}
-.galeria__foto:nth-of-type(7) {
-  grid-column: 7/13;
-  /* grid-row: 5/6; */
-}
-.galeria__foto:nth-of-type(8) {
-  grid-column: 1/13;
-  /* grid-row: 4/5; */
-}
 /* Estilos de pagina contacto.html */
 
-.contacto__titulo {
-  @extend %titulos;
-}
+.contacto {
+  .contacto__titulo {
+    @extend %titulos;
+  }
+  .contacto__contenedor__formulario {
+    display: flex;
+    justify-content: flex-end;
 
-.contacto__contenedor__formulario {
-  display: flex;
-  justify-content: flex-end;
-}
-.contacto__descripcion {
-  font-size: $textMedium;
-  color: map-get($colors, colorTextAlternative);
-  padding: $spacingMedium;
-}
-.contacto__formulario {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-evenly;
-}
-.contacto__formulario label {
-  color: map-get($colors, colorTextAlternative);
-  font-size: medium;
-  margin-top: $spacingXsmall;
-  text-align: left;
-  width: 40rem;
-}
-.contacto__formulario input {
-  border-radius: 10px;
-  height: 3.5rem;
-  width: 40rem;
-  padding-left: $spacingSmall;
-}
-.contacto__formulario textarea {
-  border-radius: 10px;
-  height: 20rem;
-  width: 40rem;
-  padding: $spacingSmall;
-  border-width: 2px;
-  border-style: inset;
-  border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
-}
-.contacto__formulario input.contacto__formulario__boton {
-  width: 15rem;
-  margin-top: $spacingSmall;
-  @include button(2rem, $textNormal);
-  padding: 0 $spacingSmall;
-  animation: animacion_boton 2s linear infinite;
+    .contacto__descripcion {
+      font-size: $textMedium;
+      color: map-get($colors, colorTextAlternative);
+      padding: $spacingMedium;
+    }
+    .contacto__formulario {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-evenly;
+
+      label {
+        color: map-get($colors, colorTextAlternative);
+        font-size: medium;
+        margin-top: $spacingXsmall;
+        text-align: left;
+        max-width: 40rem;
+      }
+      input {
+        border-radius: 10px;
+        height: 3.5rem;
+        max-width: 40rem;
+        padding-left: $spacingSmall;
+
+        &.contacto__formulario__boton {
+          width: 15rem;
+          margin-top: $spacingSmall;
+          @include button(2rem, $textNormal);
+          padding: 0 $spacingSmall;
+          animation: animacion_boton 2s linear infinite;
+        }
+      }
+      textarea {
+        border-radius: 10px;
+        height: 20rem;
+        max-width: 40rem;
+        padding: $spacingSmall;
+        border-width: 2px;
+        border-style: inset;
+        border-color: -internal-light-dark(
+          rgb(118, 118, 118),
+          rgb(133, 133, 133)
+        );
+      }
+    }
+  }
 }
 
 /*Mobile*/
